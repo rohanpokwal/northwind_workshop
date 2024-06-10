@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-img {
+  height: 500px;
+  width: 500px;
+}
+
+.img-container {
+  text-align: center;
+}
