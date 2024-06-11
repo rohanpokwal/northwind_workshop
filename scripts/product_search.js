@@ -69,7 +69,7 @@ function buildTableRow(tBody, productData) {
   //create the cell for the department
   let productPriceCell = row.insertCell();
   //put the relevant course data in the
-  productPriceCell.innerHTML = productData.unitPrice;
+  productPriceCell.innerHTML = `$ ${Number(productData.unitPrice).toFixed(2)}`;
 
   //create the cell for the department
   let productDetailsCell = row.insertCell();
@@ -81,14 +81,14 @@ function buildTableRow(tBody, productData) {
 //Just pass it the id of the element you want to hide
 function hideElement(someSelector) {
   let el = document.querySelector(someSelector);
-  el.style.display = "none";
+  el.classList.add("d-none");
 }
 
 //This function will show an HTML element on the page
 //Just pass it the id of the element you want to show
 function showElement(someSelector) {
   let el = document.querySelector(someSelector);
-  el.style.display = "block";
+  el.classList.remove("d-none");
 }
 /* ******************************************* */
 /* This work is for populating CategoryDDL */
